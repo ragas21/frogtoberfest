@@ -11,6 +11,8 @@ COPY --chown=octocat:octocat package.json /app
 
 # The latest offical nodejs image already includes yarn.
 RUN yarn install --production --pure-lockfile
+RUN yarn global add react-scripts@3.0.1
+
 
 COPY --chown=octocat:octocat . /app
 
